@@ -13,11 +13,13 @@ docker run -d -p 9701:9700 dispsql:v0.0.1
 
 ## 3.3 往coordinator中添加worker
 docker exec -it <coordinator_container_id> psql -p 9700 -c "select master_add_node(<worker_ip>, 9701);"
+
 docker exec -it 85a3007ccda7 psql -p 9700 -c "select master_add_node('192.168.140.94', 9701);"  ## 地址为docker网桥的地址
 
 ## 3.4 数据库操作
 ### 查询工作节点
 docker exec -it <coordinator_container_id> psql -p 9700 -c "select * from master_get_active_worker_nodes();"
+
 docker exec -it 85a3007ccda7 psql -p 9700 -c "select * from master_get_active_worker_nodes();"
 
 ### 连接主控节点
