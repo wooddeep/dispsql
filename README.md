@@ -1,0 +1,2 @@
+# dispsql
+基于citusdata:v8.1制作的docker镜像，可用于搭建跨物理节点的分布式postgres数据库(因为官方的docker镜像只能在一个物理节点上启动分布式postgres)。
