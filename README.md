@@ -40,5 +40,4 @@ SELECT create_distributed_table('test', 'id');
 insert into test(id, name) values (1, 'lihan');
 
 ### 连接工作接地
-psql -p 9700 -h 192.168.140.94 -U postgres -d postgres
-可以查询分片的数据
+psql -p 9700 -h 192.168.140.94 -U postgres -d postgres #可以查询分片的数据
